@@ -46,7 +46,7 @@ while true; do
     echo "difference not found"
   fi
 
-  echo "--- checking prometheus configs ---"
+  echo "--- checking alertmanager configs ---"
   # ----- alertmanager config 確認 ----- #
   # パーツ組み立て
   ${AlertManagerMergeScriptPath} ${TEMPDIR} ${AlertManagerFilePattern} ${AlertManagerBaseDir}/${AlertManagerBaseconfig} > ${TEMPDIR}/alertmanager_temp.yml

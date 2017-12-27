@@ -8,8 +8,8 @@ groups:
       service: "CICDLab-Prod1"
       severity: critical
     annotations:
-      firing_text: "{{ .instanceID }} is down."
-      resolved_text: "{{ .instanceID }} is OK."
+      firing_text: "{{ $labels.instanceID }} is down."
+      resolved_text: "{{ $labels.instanceID }} is OK."
   - alert: APIHighRequestLatency
     expr: histogram_quantile(0.5, sum(rate(http_request_duration_ms_bucket[1m])) by (le, route, method, instanceID)) > 100
     for: 1m
@@ -17,5 +17,5 @@ groups:
       service: "CICDLab-Prod1"
       severity: warning
     annotations:
-      firing_text: "High median response time on {{ .instanceID }}, method: {{ .method }}, path: {{ .route }}"
-      resolved_text: "No more high response time on {{ .instanceID }} "
+      firing_text: "High median response time on {{ $labels.instanceID }}, method: {{ $labels.method }}, path: {{ $labels.route }}"
+      resolved_text: "No more high response time on {{ $labels.instanceID }} "
