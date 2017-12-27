@@ -11,5 +11,5 @@ chmod a+x ${INSTALLDIR}/*.sh
 cp watchPrometheusConfig.service /etc/systemd/system/
 cp watchPrometheusConfig /etc/default/
 systemctl daemon-reload
-systemctl start watchPrometheusConfig.service
 systemctl enable watchPrometheusConfig.service
+# systemctl start watchPrometheusConfig.service

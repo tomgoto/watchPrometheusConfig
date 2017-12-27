@@ -7,4 +7,4 @@ PROMmergeScriptPath="/opt/watchPrometheus/merge_prometheusConfigs.sh"
 PROMfilePattern="prometheusConfig*.yaml"
 PROMalertFilePattern="alertRules*.rule"
 
-PROMs3URL="s3://{S3URL}"
+PROMs3URL="s3://${S3URL}"
