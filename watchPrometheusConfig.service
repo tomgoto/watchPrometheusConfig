@@ -1,0 +1,10 @@
+[Unit]
+Description=Watch Prometheus configuration
+After=prometheus.service
+[Service]
+EnvironmentFile=-/etc/default/watchPrometheusConfig
+ExecStart=/opt/watchPrometheus/watchPrometheusConfig.sh
+Restart=always
+Type=simple
+[Install]
+WantedBy=multi-user.target

@@ -1,0 +1,10 @@
+PROMbaseDir="/opt/prometheus"
+PROMbaseConfig="base_prometheus.yml"
+PROMresultConfig="prometheus.yml"
+
+PROMmergeScriptPath="/opt/watchPrometheus/merge_prometheusConfigs.sh"
+
+PROMfilePattern="prometheusConfig*.yaml"
+PROMalertFilePattern="alertRules*.rule"
+
+PROMs3URL="s3://{S3URL}"
