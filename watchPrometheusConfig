@@ -1,10 +1,16 @@
+PROMs3URL="s3://${S3URL}"
+
 PROMbaseDir="/opt/prometheus"
 PROMbaseConfig="base_prometheus.yml"
 PROMresultConfig="prometheus.yml"
-
 PROMmergeScriptPath="/opt/watchPrometheus/merge_prometheusConfigs.sh"
-
-PROMfilePattern="prometheusConfig*.yaml"
+PROMfilePattern="prometheusConfig*.yml"
 PROMalertFilePattern="alertRules*.rule"
 
-PROMs3URL="s3://${S3URL}"
+AlertManagerBaseDir="/opt/alertmanager"
+AlertManagerBaseconfig="base_alertmanager.yml"
+AlertManagerResultConfig="alertmanager.yml"
+AlertManagerMergeScriptPath="/opt/watchPrometheus/merge_alertmanagerConfigs.sh"
+AlertManagerFilePattern="alertmanager*.yml"
+
+

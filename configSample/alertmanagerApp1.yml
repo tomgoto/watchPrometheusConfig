@@ -1,0 +1,13 @@
+route:
+  routes:
+    - receiver: 'CICDLab-Prod1'
+      match: 
+        service: "CICDLab-Prod1"
+receivers:
+- name: 'CICDLab-Prod1'
+  slack_configs:
+    - api_url: "https://hooks.slack.com/services/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"
+      channel: "#alert-test"
+      send_resolved: true
+      title: '{{ if eq .Status "firing" }}[FIRING]{{else}}[RESOLVED]{{end}} {{ .GroupLabels.alertname }}'
+      text: '{{ if eq .Status "firing" }}{{ .CommonAnnotations.firing_text }}{{else}}{{ .CommonAnnotations.resolved_text }}{{end}}'

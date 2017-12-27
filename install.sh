@@ -5,6 +5,7 @@ INSTALLDIR="/opt/watchPrometheus"
 
 mkdir -p ${INSTALLDIR}
 cp merge_prometheusConfigs.sh ${INSTALLDIR}/
+cp merge_alertmanagerConfigs.sh ${INSTALLDIR}/
 cp watchPrometheusConfig.sh ${INSTALLDIR}/
 chmod a+x ${INSTALLDIR}/*.sh
 

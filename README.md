@@ -15,3 +15,6 @@ S3バケットに保存されたPrometheus設定ファイルのパーツを定�
 ```shell
 bash install.sh
 ```
+
+## サンプル
+S3バケットに、`configSample`内のファイルをコピーしておくと、自動的にprometheusに更新します
