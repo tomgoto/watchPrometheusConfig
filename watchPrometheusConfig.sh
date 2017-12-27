@@ -4,6 +4,7 @@ INTERVAL=60 #seconds
 
 while true; do
 
+  echo "=== Beginnig cycle ==="
   TEMPDIR=`mktemp -d`
   cd ${TEMPDIR}
 
